@@ -6,7 +6,7 @@ from core.serializers import CategorySerializer
 # Create your views here.
 
 
-def web_site(request: HttpResponse) -> HttpRequest:
+def web_site(request: HttpResponse) -> HttpResponse:
     return HttpResponse("Hello World")
     
 
