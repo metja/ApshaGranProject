@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     
     "corsheaders",
     "rest_framework",
+    'drf_spectacular',
     "core",
 ]
 
@@ -126,5 +127,24 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+REST_FRAMEWORK = {
+    # YOUR SETTINGS
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}
+
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'Apsha Gran Project API',
+    'DESCRIPTION': 'View website to order your building',
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': False,
+    'SWAGGER_UI_SETTINGS': {
+        'deepLink': True,
+        'defaultModelRendering': True,
+        'defaultModelsExpandDepth': 2,
+        'defaultModelExpandDepth': 2,
+    }
+    # OTHER SETTINGS
+}
 
 CORS_ALLOW_ALL_ORIGINS = True

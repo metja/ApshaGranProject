@@ -8,4 +8,9 @@ class Category(models.Model):
     
     def __str__(self):
         return self.name
-    
+
+
+class Image(models.Model):
+    image = models.ImageField(upload_to="images/")
+
+
